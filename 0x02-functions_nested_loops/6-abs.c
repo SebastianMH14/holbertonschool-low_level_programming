@@ -3,13 +3,12 @@
 
 /**
  * _abs - check the code for Holberton School students.
- *@int: this is the check
+ *@x: this is the check
  *
  * Return: 1 if the number is positive. 0 otherwise
  */
-int _abs(int)
+int _abs(int x)
 {
-	int x;
 
 	if (x < 0)
 	{
