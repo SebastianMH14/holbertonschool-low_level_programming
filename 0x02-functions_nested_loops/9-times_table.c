@@ -3,8 +3,8 @@
 /**
  * times_table - 9 times table
  *
- * Description: This function prints prints the 9 times table, starting with 0.
- * Return: none.
+ * Description: prints 9 times table
+ * Return: 0
  */
 
 void times_table(void)
@@ -25,15 +25,15 @@ void times_table(void)
 					_putchar(' ');
 					_putchar(' ');
 				}
-				_putchar(c + '0');
+				_putchar(c + 48);
 			}
 
 			else
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar(c / 10 + '0');
-				_putchar(c % 10 + '0');
+				_putchar(c / 10 + 48);
+				_putchar(c % 10 + 48);
 			}
 		}
 		_putchar ('\n');
