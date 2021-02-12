@@ -2,7 +2,6 @@
 
 /**
  *print_numbers - prints the digits (0 through 9).
- *@a: the digit to detect
  *
  *Return: 0
  *
