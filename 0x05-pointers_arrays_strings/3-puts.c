@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 /**
  * _puts -  function that prints a string.
