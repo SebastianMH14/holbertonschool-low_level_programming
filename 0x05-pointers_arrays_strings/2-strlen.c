@@ -14,4 +14,3 @@ int _strlen(char *s)
 		largo++;
 	return (largo);
 }
-A
