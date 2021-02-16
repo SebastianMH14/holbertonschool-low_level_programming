@@ -8,8 +8,7 @@
  */
 int _strlen(char *s)
 {
-    char abc [60];
-    int a;
-    a = _strlen(abc);
-
+	int largo = 0;
+	while (s[largo]!='\0') largo++;
+	return largo;
 }
