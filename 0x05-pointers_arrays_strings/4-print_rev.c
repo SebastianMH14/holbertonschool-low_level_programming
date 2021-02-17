@@ -4,22 +4,22 @@
  * print_rev - that prints a string, in reverse.
  * @s: value s
  *
- * Return : 0
+ * Return : void 
  */
 void print_rev(char *s)
 {
 	int a, b;
 
-	b = 0;
-	while (*s != 0)
+	a = 0;
+	while (s[a] != '\0')
 	{
-		s++;
-		b++;
+		a++;
 	}
-	for (a = b; a >= 0; --a)
+    b = a - 1;
+	while (b >= 0)
 	{
-		_putchar(*s);
-		--s;
+		_putchar(s[b]);
+		b--;
 	}
 	_putchar ('\n');
 }
