@@ -6,7 +6,7 @@
  *
  *Return: void B
  */
-Bvoid puts_half(char *str)
+void puts_half(char *str)
 {
 	int c = 0;
 
