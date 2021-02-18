@@ -5,7 +5,7 @@
  * @dest: value of dest
  * @src: value of src
  * @n: value of n
- * Return : dest
+ * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -16,5 +16,5 @@ char *_strncpy(char *dest, char *src, int n)
 	for ( ; i < n; i++)
 		dest[i] = '\0';
 
-	return (dest);
+	return (Bdest);
 }
