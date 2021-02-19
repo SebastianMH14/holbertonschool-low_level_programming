@@ -6,7 +6,7 @@
  *
  * Return: 0
  */
-char *string_toupper(char *s)
+char *string_toupper(char s[100])
 {
 	int i = 0;
 
@@ -18,5 +18,5 @@ char *string_toupper(char *s)
 	}
 	i++;
 	}
-	return (0);
+	return (s);
 }
