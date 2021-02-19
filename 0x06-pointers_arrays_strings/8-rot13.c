@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *Root - function that encodes a string into 1337.
+ *rot13 - function that encodes a string into 1337.
  * @cadena: value of string
  * Return: cadena
  */
