@@ -8,7 +8,7 @@
  */
 void print_chessboard(char (*a)[8])
 {
-int b, c;
+	int b, c;
 
 	for (b = 0; b < 8; b++)
 	{
@@ -17,6 +17,5 @@ int b, c;
 			_putchar(a[b][c]);
 		}
 		_putchar('\n');
-
 	}
 }
