@@ -13,8 +13,8 @@ i = 0;
 if (s[i] != '\0')
 {
 _putchar(s[i]);
-_puts_recursion(&s[i+1]);
+_puts_recursion(&s[i + 1]);
 }
-else    
-    _putchar(10);
+else
+_putchar(10);
 }
