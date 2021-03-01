@@ -3,7 +3,7 @@
 /**
  *main - Write a program that multiplies two numbers
  *@argc: counter
- *@argv: argument 
+ *@argv: argument
  *Return: 0
  */
 
