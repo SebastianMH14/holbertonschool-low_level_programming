@@ -29,5 +29,10 @@ char *_strdup(char *str)
 		str++;
 	}
 	*c = '\0';
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	return (b);
 }
