@@ -13,13 +13,15 @@ char *_strdup(char *str)
 	char *b;
 	char *c;
 
+	if (str == 	NULL)
+		return (NULL);
 	while (str[largo] != '\0')
 	{
 		largo++;
 	}
 	b = (char *)malloc(sizeof(char) * largo + 1);
 	if (b == NULL)
-	return ((char *)NULL);
+	return (NULL);
 
 	c = b;
 	while (*str)
@@ -29,12 +31,5 @@ char *_strdup(char *str)
 		str++;
 	}
 	*c = '\0';
-
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	
 	return (b);
-	free (b);
 }
