@@ -3,38 +3,48 @@
 #include <stdlib.h>
 
 /**
- * str_concat - function that concatenates two strings
- * @s1: string 1
- * @s2: string 2
- * Return: Return NULL if str = 0
+ *_strlen - longitud string
+ *@s: value of s
+ *Return: length string
+ */
+char _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i + 1);
+}
+/**
+ *str_concat - concatenate two strings
+ *@s1: string number 1
+ *@s2: string number 2
+ *Return: pointer to concatenated string, NULL if fails
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *a;
-	int i;
-	int j;
-	int c;
-	int d;
+	char *dest;
+	unsigned int i, j;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
+	i = _strlen(s1);
+
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
+	j = _strlen(s2);
+
+	dest = (char *)malloc((i + j - 1) * sizeof(char));
+
+	if (dest == NULL)
+		return (NULL);
+
 	for (i = 0; s1[i] != '\0'; i++)
-		;
+		dest[i] = s1[i];
+
 	for (j = 0; s2[j] != '\0'; j++)
-		;
-	a = malloc((i * sizeof(*s1)) + (j * sizeof(*s2)) + 1);
-	for (c = 0, d = 0; c < (i + j + 1); c++)
-	{
-		if (c < i)
-			a[c] = s1[c];
-		else
-			a[c] = s2[d++];
-	}
-	return (a);
+		dest[i + j] = s2[j];
+
+	dest[i + j] = s2[j];
+	return (dest);
 }
