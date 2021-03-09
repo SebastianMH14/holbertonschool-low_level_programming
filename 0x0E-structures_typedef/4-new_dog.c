@@ -3,37 +3,6 @@
 #include <stdlib.h>
 
 /**
- * _strlen -  that returns the length of a string.
- * @s: value of char
- *
- *Return: Always 0.
- */
-int _strlen(char *s)
-{
-	int largo = 0;
-
-	while (s[largo] != '\0')
-		largo++;
-	return (largo);
-}
-/**
- * _strcpy -  copy string
- * @dest: pointer
- *@src: source
- *Return: pointer
- */
-char *_strcpy(char *dest, char *src)
-{
-	int a;
-
-	for (a = 0; *(src + a) != '\0'; a++)
-	{
-		*(dest + a) = *(src + a);
-	}
-	return (dest);
-}
-
-/**
  * new_dog - function that creates a new dog.
  *@name: name
  *@age: age
@@ -42,33 +11,44 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *dognew;
-	int largoname;
-	int largown;
+	int a = 0;
+	int	b = 0;
+	int c;
+	dog_t *dogger;
 
-	dognew = malloc(sizeof(struct dog));
-	if (dognew == NULL)
-		return (NULL);
+	while (name[a] != '\0')
+	a++;
 
-	largoname = _strlen(name);
-	dognew->name = malloc(sizeof(char) * (largoname + 1));
-	if (dognew->name == NULL)
+	while (owner[b] != '\0')
+	b++;
+	dogger = malloc(sizeof(dog_t));
+
+	if (dogger == NULL)
 	{
-		free(dognew);
+		free(dogger);
 		return (NULL);
 	}
-
-	dognew->name = _strcpy(dognew->name, name);
-
-	largown = _strlen(owner);
-	dognew->owner = malloc(sizeof(char) * (largown + 1));
-	if (dognew->owner == NULL)
+	dogger->name = malloc(a * sizeof(dogger->name));
+	if (dogger->name == NULL)
 	{
-		free(dognew->name);
-		free(dognew);
+		free(dogger->name);
+		free(dogger);
 		return (NULL);
 	}
-	dognew->owner = _strcpy(dognew->owner, owner);
-	dognew->age = age;
-	return (dognew);
+	for (c = 0; c <= a; c++)
+	dogger->name[c] = name[c];
+	dogger->age = age;
+
+	dogger->owner = malloc(b * sizeof(dogger->owner));
+
+	if (dogger->owner == NULL)
+	{
+		free(dogger->owner);
+		free(dogger->name);
+		free(dogger);
+		return (NULL);
+	}
+	for (c = 0; c <= b; c++)
+	dogger->owner[c] = owner[c];
+	return (dogger);
 }
