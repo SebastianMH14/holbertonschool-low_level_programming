@@ -15,11 +15,9 @@ list_t *add_node(list_t **head, const char *str)
 		{
 			return (NULL);
 		}
-	if (str)
-	{
+
 	new_node->str = strdup(str);
 	new_node->len = _strlen(new_node->str);
-	}
 	new_node->next =  *head;
 	*head = new_node;
 	return (new_node);
@@ -38,6 +36,5 @@ int _strlen(char *s)
 
 	while (s[largo] != '\0')
 		largo++;
-		s++;
 	return (largo);
 }
