@@ -17,7 +17,7 @@ list_t *add_node(list_t **head, const char *str)
 		}
 
 	new_node->str = strdup(str);
-	new_node->len = _strlen(new_node->str);
+	new_node->len = _strlen(str);
 	new_node->next =  *head;
 	*head = new_node;
 	return (new_node);
@@ -30,7 +30,7 @@ list_t *add_node(list_t **head, const char *str)
  *
  *Return: Always 0.
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int largo = 0;
 
