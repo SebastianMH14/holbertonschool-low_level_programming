@@ -38,5 +38,6 @@ int _strlen(char *s)
 
 	while (s[largo] != '\0')
 		largo++;
+		s++;
 	return (largo);
 }
