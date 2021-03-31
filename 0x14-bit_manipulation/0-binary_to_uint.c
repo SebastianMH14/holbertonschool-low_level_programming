@@ -25,5 +25,6 @@ unsigned int binary_to_uint(const char *b)
 		{
 			i = i | 1;
 		}
+	}
 	return (i);
 }
