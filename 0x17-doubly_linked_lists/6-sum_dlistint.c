@@ -20,5 +20,5 @@ int sum_dlistint(dlistint_t *head)
 		i += a->n;
 		a = a->next;
 	}
-	return (i)
+	return (i);
 }
