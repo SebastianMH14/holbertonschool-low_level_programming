@@ -3,7 +3,7 @@
 /**
  *hash_table_print - function that prints a hash table.
  *@ht: is the hash table
- * 
+ *
  *Return: void
  */
 void hash_table_print(const hash_table_t *ht)
@@ -11,7 +11,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i, j = 0;
 	hash_node_t *n;
 
-	if(ht == NULL)
+	if (ht == NULL)
 	{
 		return;
 	}
